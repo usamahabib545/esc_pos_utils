@@ -22,7 +22,7 @@ class CapabilityProfile {
   /// Public factory
   static Future<CapabilityProfile> load({String name = 'default'}) async {
     final content = await rootBundle
-        .loadString('lib/resources/capabilities.json');
+        .loadString('packages/esc_pos_utils/resources/capabilities.json');
     Map capabilities = json.decode(content);
 
     var profile = capabilities['profiles'][name];
